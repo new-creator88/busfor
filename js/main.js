@@ -8,3 +8,31 @@ function changeText() {
   }
   
   changeText();
+
+
+const openModalButton = document.getElementById('openModal');
+const modal = document.getElementById('myModal');
+const closeButton = modal.querySelector('.modal__close');
+const btnClose = modal.querySelector('.btn-close');
+
+// Открытие модального окна
+openModalButton.addEventListener('click', () => {
+    modal.style.display = 'flex';
+});
+
+// Закрытие модального окна при клике на крестик
+closeButton.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+
+// Закрытие модального окна при клике на кнопку "Закрыть"
+btnClose.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+
+// Закрытие модального окна при клике вне окна
+window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+});

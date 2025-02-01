@@ -89,11 +89,26 @@ h4 {
 .btn-primary:hover {
     background: var(--violet-light-color);
     transition: 0.8s;
+    cursor: pointer;
 }
 
 .btn-primary:disabled {
     color: var(--white-color);
     background: var(--gray-color);
+}
+
+.btn-secondary {
+    border: none;
+    outline: none;
+
+    padding: 12px 40px;
+    border-radius: 4px;
+
+    color: var(--violet-color);
+    background-color: var(--white-color);
+
+    border: 1px solid var(--violet-color);
+    cursor: pointer;
 }
 
 .btn-contact {
@@ -107,6 +122,8 @@ h4 {
     background: var(--violet-color);
     transition: 1.1s;
 }
+
+
 
 /* ========= HEADER ========= */
 
@@ -356,4 +373,122 @@ h4 {
     color: var(--gray-dark-color);
 
     padding: 24px 0 16px;
+}
+
+/* ========= MODAL ========= */
+
+.modal {
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px); /* Размытие фона */
+}
+
+.modal-content {
+    width: 100%;
+    max-width: 472px;
+
+    padding: 40px 40px 36px 40px;
+
+    border-radius: 8px;
+    background-color: white;
+}
+
+.modal__title {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 32px;
+}
+
+.modal__close {
+    cursor: pointer;
+}
+
+.modal-group {
+    margin-bottom: 16px;
+}
+
+.modal-group label {
+    display: block;
+
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--dark-color);
+
+    margin-bottom: 8px;
+}
+
+.modal-group input {
+    width: 100%;
+
+    font-weight: 300;
+    line-height: 1.2;
+    color: var(--gray-dark-color);
+
+    padding: 10px 16px;
+
+    border-radius: 4px;
+    border: 1px solid var(--violet-gray-color);
+}
+
+.modal-group input:focus {
+    outline: none;
+    border-color: var(--violet-color);
+}
+
+.password-container {
+    position: relative;
+}
+
+#togglePassword {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+
+    font-size: 20px;
+    color: var(--gray-dark-color);
+
+    cursor: pointer;
+}
+
+#togglePassword:hover {
+    color: var(--violet-color);
+}
+
+.modal-group__link {
+    display: block;
+
+    line-height: 1.2;
+    color: var(--violet-color);
+
+    margin-bottom: 32px;
+}
+
+.login-form__btn {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+
+    margin-bottom: 16px;
+}
+
+.login-span {
+    font-weight: 300;
+    color: var(--dark-color);
+}
+
+.login-span a {
+    font-weight: 400;
+    color: var(--violet-color);
 }
